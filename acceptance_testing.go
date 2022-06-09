@@ -26,6 +26,7 @@ import (
 	"testing"
 	"time"
 
+	"github.com/conduitio/conduit-connector-sdk/internal"
 	"github.com/jpillora/backoff"
 	"github.com/matryer/is"
 	"go.uber.org/goleak"
@@ -437,7 +438,7 @@ func (d ConfigurableAcceptanceTestDriver) ReadFromDestination(t *testing.T, reco
 
 // writeAsync writes records to destination using Destination.WriteAsync.
 func (d ConfigurableAcceptanceTestDriver) writeAsync(ctx context.Context, dest Destination, records []Record) error {
-	var waitForAck sync.WaitGroup
+	var waitForAck internal.WaitGroup
 	var ackErr error
 
 	for _, r := range records {
@@ -461,7 +462,11 @@ func (d ConfigurableAcceptanceTestDriver) writeAsync(ctx context.Context, dest D
 	}
 
 	// wait for each of the records, for at most the specified write timeout
-	waitTimeout(&waitForAck, time.Duration(len(records))*d.WriteTimeout())
+	err = waitForAck.WaitTimeout(ctx, time.Duration(len(records))*d.WriteTimeout())
+	if err != nil {
+		return err
+	}
+
 	if ackErr != nil {
 		return ackErr
 	}
