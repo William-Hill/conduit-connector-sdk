@@ -18,8 +18,6 @@ require (
 )
 
 require (
-	buf.build/gen/go/conduitio/conduit-connector-protocol/grpc/go v1.3.0-20230307130612-8c27b29b78bf.1 // indirect
-	buf.build/gen/go/conduitio/conduit-connector-protocol/protocolbuffers/go v1.28.1-20230307130612-8c27b29b78bf.4 // indirect
 	github.com/Masterminds/goutils v1.1.1 // indirect
 	github.com/Masterminds/semver/v3 v3.2.0 // indirect
 	github.com/fatih/color v1.7.0 // indirect
@@ -40,11 +38,9 @@ require (
 	github.com/spf13/cast v1.3.1 // indirect
 	go.uber.org/atomic v1.7.0 // indirect
 	golang.org/x/crypto v0.3.0 // indirect
-	golang.org/x/mod v0.7.0 // indirect
 	golang.org/x/net v0.7.0 // indirect
 	golang.org/x/sys v0.5.0 // indirect
 	golang.org/x/text v0.7.0 // indirect
-	golang.org/x/tools v0.3.0 // indirect
 	google.golang.org/genproto v0.0.0-20230110181048-76db0878b65f // indirect
 	google.golang.org/grpc v1.53.0 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
