@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/Masterminds/sprig/v3 v3.2.3
-	github.com/conduitio/conduit-connector-protocol v0.4.1-0.20230307131504-9284c237d0eb
+	github.com/conduitio/conduit-connector-protocol v0.4.1-0.20230308125130-a194ea92a593
 	github.com/golang/mock v1.6.0
 	github.com/jpillora/backoff v1.0.0
 	github.com/matryer/is v1.4.1
@@ -40,9 +40,11 @@ require (
 	github.com/spf13/cast v1.3.1 // indirect
 	go.uber.org/atomic v1.7.0 // indirect
 	golang.org/x/crypto v0.3.0 // indirect
+	golang.org/x/mod v0.7.0 // indirect
 	golang.org/x/net v0.7.0 // indirect
 	golang.org/x/sys v0.5.0 // indirect
 	golang.org/x/text v0.7.0 // indirect
+	golang.org/x/tools v0.3.0 // indirect
 	google.golang.org/genproto v0.0.0-20230110181048-76db0878b65f // indirect
 	google.golang.org/grpc v1.53.0 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
